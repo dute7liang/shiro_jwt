@@ -2,16 +2,17 @@ server:
   port: 8090
   servlet:
     context-path: /duteliang
-    session:
-      timeout: 30m
-#logging:
+#    session:
+#      timeout: 30m
+logging:
 #  path: ./logs/spring_demo
-#  file: ./logs/spring_demo/demo.log
+  file: ./logs/spring_demo/demo.log
+  path:
 #  config: classpath:logback.xml
 spring :
   datasource:
     druid:
-      url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://127.0.0.1:3306/shiro?useUnicode=true&characterEncoding=utf-8
       username: root
       password: root
       driverClassName: com.mysql.jdbc.Driver
@@ -27,7 +28,7 @@ spring :
       testOnReturn: false
       poolPreparedStatements: true
       maxPoolPreparedStatementPerConnectionSize: 20
-      filters: stat,wall,log4j
+      filters: stat,wall,slf4j
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       urlMapping: /druid/*
       allow: 127.0.0.1,10.0.0.5,10.0.0.25
@@ -52,7 +53,7 @@ mapper:
   # 通用接口地址,必须配置，4.0以上版本可以不用配置，提供注解@RegisterMapper
   mappers:
   - tk.mybatis.mapper.common.Mapper
-  - com.duteliang.spring.shiro.mapper.SupperMapper
+  - com.duteliang.mapper.SupperMapper
   not-empty: false
   identity: MYSQL
 

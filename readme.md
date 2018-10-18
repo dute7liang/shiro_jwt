@@ -4,3 +4,6 @@
 本项目采用IntelliJ IDEA编辑器开发 <br/>
 jdk        1.8 <br/>
 springBoot 2.0.6 <br/>
+
+参考文档或资料：<br/>
+https://github.com/Smith-Cruise/Spring-Boot-Shiro.git

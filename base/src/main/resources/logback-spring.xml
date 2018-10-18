@@ -36,26 +36,14 @@
 
 
 	<!-- springBoot 推荐的输出方式 -->
-	<appender name="DEBUG_LEVEL_REMAPPER" class="org.springframework.boot.logging.logback.LevelRemappingAppender">
-		<destinationLogger>org.springframework.boot</destinationLogger>
-	</appender>
-
+	<!-- spring-boot-2.0.6.RELEASE.jar!\org\springframework\boot\logging\logback\defaults.xml -->
 	<logger name="org.apache.catalina.startup.DigesterFactory" level="ERROR"/>
 	<logger name="org.apache.catalina.util.LifecycleBase" level="ERROR"/>
 	<logger name="org.apache.coyote.http11.Http11NioProtocol" level="WARN"/>
 	<logger name="org.apache.sshd.common.util.SecurityUtils" level="WARN"/>
 	<logger name="org.apache.tomcat.util.net.NioSelectorPool" level="WARN"/>
-	<logger name="org.crsh.plugin" level="WARN"/>
-	<logger name="org.crsh.ssh" level="WARN"/>
 	<logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="ERROR"/>
 	<logger name="org.hibernate.validator.internal.util.Version" level="WARN"/>
-	<logger name="org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration" level="WARN"/>
-	<logger name="org.springframework.boot.actuate.endpoint.jmx" additivity="false">
-		<appender-ref ref="DEBUG_LEVEL_REMAPPER"/>
-	</logger>
-	<logger name="org.thymeleaf" additivity="false">
-		<appender-ref ref="DEBUG_LEVEL_REMAPPER"/>
-	</logger>
 
 	<!-- show parameters for hibernate sql 专为 Hibernate 定制 -->
 	<logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" />
